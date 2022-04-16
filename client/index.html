@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <div class="tetris-container">
+        <div class="tetris-manager">
+          <div class="main-user">
+            <div class="tetris"></div>
+          </div>
+          <div class="other-user hide"></div>
+        </div>
+      </div>
+
+      <div class="chat">
+        <div class="chat__toggle-area">
+          <div class="arrow right">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+          </div>
+          <div class="arrow left">
+            <div class="arrow-top"></div>
+            <div class="arrow-bottom"></div>
+          </div>
+        </div>
+        <div class="chat__contents">
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field chat__input"
+              placeholder="Message"
+              name="msg"
+              id="msg"
+              required
+            />
+            <label for="msg" class="form__label">Message</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
